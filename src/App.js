@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import { useState } from 'react';
 
 export const App = () => {
@@ -96,12 +96,11 @@ export const App = () => {
     })
     
     let i = 0;
-
     /* Get Random Book */
     /* OT -> shortest chapter has 2 verses Psalms 117.... NT -> shortest chapter has 8 verses */
-    if (searchFilter == 1) i = Math.floor(Math.random()*65 + 1)
-    if (searchFilter == 2) i = Math.floor(Math.random()*38 + 1)
-    if (searchFilter == 3) i = Math.floor(Math.random()*26 + 38)
+    if (searchFilter === 1) i = Math.floor(Math.random()*65 + 1)
+    if (searchFilter === 2) i = Math.floor(Math.random()*38 + 1)
+    if (searchFilter === 3) i = Math.floor(Math.random()*26 + 38)
 
     let Biblebook = bible[i]
     let chapter = Math.floor(Math.random()*Biblebook.chapters + 1)
@@ -168,5 +167,5 @@ export const App = () => {
     </div>
   );
 };
-
 export default App;
+
